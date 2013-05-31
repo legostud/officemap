@@ -66,44 +66,55 @@ nav {
 	position:relative; 
 	width:800px; 
   
-		.map-name { 
-			padding:10px; 
-		
-			.floor3 { display:none; }
+	.map-name { 
+		padding:10px; 
+	}
+
+	.overlay { 
+		display:none; 
+		left:500px; 
+		position:absolute; 
+		top:110px; 
+
+		.data { 
+			background-color:#F6F6F6; 
+			border: 2px solid #333333; 
+			border-radius:5px; 
+			left:20px; 
+			padding:5px; 
+			position:relative; 
+			top:-37px; 
 		}
-		.result-wrapper { 
-			display:none; 
-			left:500px; 
-			position:absolute; 
-			top:110px; 
-    
-			.result { 
-				background-color:#F6F6F6; 
-				border: 2px solid #333333; 
-				border-radius:5px; 
-				left:20px; 
-				padding:5px; 
-				position:relative; 
-				top:-37px; 
-			}
-			.pointer { 
-				border: 10px solid transparent; 
-				border-right:10px solid #333333; 
-				height:0; 
-				left:0; 
-				position:relative; 
-				top:10px; 
-				width:0; 
-			}
-			.pointer2 { 
-				border: 10px solid transparent; 
-				border-right:10px solid #F6F6F6; 
-				height:0; 
-				left:2px; 
-				position:relative; 
-				top:-10px; 
-				width:0; 
-				z-index:6; 
-			}
+		.pointer { 
+			border: 10px solid transparent; 
+			border-right:10px solid #333333; 
+			height:0; 
+			left:0; 
+			position:relative; 
+			top:10px; 
+			width:0; 
 		}
+		.pointer2 { 
+			border: 10px solid transparent; 
+			border-right:10px solid #F6F6F6; 
+			height:0; 
+			left:2px; 
+			position:relative; 
+			top:-10px; 
+			width:0; 
+			z-index:6; 
+		}
+	}
+}
+.map.fourth {
+	background-position: left top; 
+
+	.floor3 { display:none; }
+
+}
+.map.third {
+	background-position: left -604px; 
+
+	.floor4 { display:none; }
+
 }

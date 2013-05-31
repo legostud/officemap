@@ -9,9 +9,32 @@
 			var currentfloor = 4;
 			
 			// Display info overlay
-			// parameter is the id of the name clicked
-			function displayInfoOverlay(id) {
-				// Get the 
+			// parameters are
+			// the id of the name clicked
+			// the type of name clicked			
+			function displayInfoOverlay(id, type) {
+console.log('display ' + id + ' ' + type);
+				// Get the information for the popup
+				// set the url for the JSON feed.
+				var url = '/' + type + '/' + id + '.json';
+				//get the data for the name clicked
+				$.getJSON(url, function(data){
+					// after the data is retrieved
+					// adjust the map to show the correct floor
+					if(data.floor == "4" && $('.map').hasClass('third') ){
+						$('.map').removeClass('third').addClass('forth');
+					}
+					else if(data.floor == "3" && $('.map').hasClass('fourth')){
+						$('.map').removeClass('fourth').addClass('third');
+					}
+					// populate the overlay
+					$('.map .overlay .data').html('<ul></ul>').
+						append('<li class="name">'+data.name+'</li>');
+						//<br />'+item.title+'<br />'+item.email+'<br />'+item.phone+'<br />Office#'+item.office);
+					
+					// save the location_number
+					
+				});
 				
 				// Get the location for where to display the overlay
 
@@ -96,8 +119,10 @@
 					$('nav .links > li').click(function(e){	
 						// get the id of the item clicked
 						var id = $(this).attr('class');
+						//get the type of the item clicked
+						var type = $(this).parents('section').attr('class');
 						// display the info overlay
-						displayInfoOverlay(id);
+						displayInfoOverlay(id, type);
 					});					
 					// when the Room category title is clicked
 						
