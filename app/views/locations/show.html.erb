@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location num:</b>
+  <%= @location.location_num %>
+</p>
+
+<p>
+  <b>X cord:</b>
+  <%= @location.x_cord %>
+</p>
+
+<p>
+  <b>Y cord:</b>
+  <%= @location.y_cord %>
+</p>
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

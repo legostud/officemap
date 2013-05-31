@@ -1,0 +1,33 @@
+<h1>Listing workspaces</h1>
+
+<table>
+  <tr>
+    <th>Location num</th>
+    <th>Floor</th>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @workspaces.each do |workspace| %>
+  <tr>
+    <td><%= workspace.location_num %></td>
+    <td><%= workspace.floor %></td>
+    <td><%= workspace.name %></td>
+    <td><%= workspace.title %></td>
+    <td><%= workspace.email %></td>
+    <td><%= workspace.phone %></td>
+    <td><%= link_to 'Show', workspace %></td>
+    <td><%= link_to 'Edit', edit_workspace_path(workspace) %></td>
+    <td><%= link_to 'Destroy', workspace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Workspace', new_workspace_path %>

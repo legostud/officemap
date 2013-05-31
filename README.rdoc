@@ -1,0 +1,8 @@
+This is an updated version of the office map I built for the Cambridge Interactive Development Corporation.
+
+--
+
+Updates:
+* Using a Ruby on Rails framework
+* Simplified JSON calls
+* Using SASS for the CSS

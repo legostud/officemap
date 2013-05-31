@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location num:</b>
+  <%= @workspace.location_num %>
+</p>
+
+<p>
+  <b>Floor:</b>
+  <%= @workspace.floor %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @workspace.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @workspace.title %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @workspace.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @workspace.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_workspace_path(@workspace) %> |
+<%= link_to 'Back', workspaces_path %>

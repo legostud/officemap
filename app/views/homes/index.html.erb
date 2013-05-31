@@ -1,0 +1,38 @@
+
+<header>
+<%= image_tag("CIDC_logo.gif", :alt => "cidc") %><div class="mouse_cords"></div>
+</header>
+<nav>
+<section class="rooms">
+<h4>Rooms</h4>
+<ul class="links">
+<% @room_names.each do |room| %>
+	<li class="<%= room.id %>"><%= room.name %></li>
+<% end %>
+</ul>
+</section>
+<section class="employees">
+<h4>Employees</h4>
+<ul class="links">
+<% @employee_names.each do |employee| %>
+	<li class="<%= employee.id %>"><%= employee.name %></li>
+<% end %>
+</ul>
+<section>
+</nav>
+
+<div class="map">
+	<div class="map-name">
+		<h3 class="floor4">Fourth Floor</h3>
+		<h3 class="floor3">Third Floor</h3>
+	</div>
+	<div class="result-wrapper">
+		<div class="pointer"></div>
+		<div class="pointer2"></div>
+		<div class="result"></div>
+	</div>
+</div>
+
+<div style="clear:both; overflow:auto;"></div>
+
+

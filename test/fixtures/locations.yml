@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location_num: 1
+  x_cord: 1
+  y_cord: 1
+
+two:
+  location_num: 1
+  x_cord: 1
+  y_cord: 1

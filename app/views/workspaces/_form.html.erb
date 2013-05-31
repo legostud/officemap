@@ -1,0 +1,41 @@
+<%= form_for(@workspace) do |f| %>
+  <% if @workspace.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workspace.errors.count, "error") %> prohibited this workspace from being saved:</h2>
+
+      <ul>
+      <% @workspace.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location_num %><br />
+    <%= f.number_field :location_num %>
+  </div>
+  <div class="field">
+    <%= f.label :floor %><br />
+    <%= f.number_field :floor %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
