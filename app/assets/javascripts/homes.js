@@ -13,7 +13,9 @@
 			// the id of the name clicked
 			// the type of name clicked			
 			function displayInfoOverlay(id, type) {
-console.log('display ' + id + ' ' + type);
+// Patch - to be removed
+type = (type == "employees") ? "workspaces" : type;
+console.log(type);
 				// Get the information for the popup
 				// set the url for the JSON feed.
 				var url = '/' + type + '/' + id + '.json';
@@ -22,7 +24,7 @@ console.log('display ' + id + ' ' + type);
 					// after the data is retrieved
 					// adjust the map to show the correct floor
 					if(data.floor == "4" && $('.map').hasClass('third') ){
-						$('.map').removeClass('third').addClass('forth');
+						$('.map').removeClass('third').addClass('fourth');
 					}
 					else if(data.floor == "3" && $('.map').hasClass('fourth')){
 						$('.map').removeClass('fourth').addClass('third');
